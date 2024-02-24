@@ -1,4 +1,4 @@
-import { BrowserRouter,Route, Routes} from 'react-router-dom';
+import { BrowserRouter,Route, Switch} from 'react-router-dom';
 import Header from './components/header'
 import Home from './components/home'
 import About from './components/about'
@@ -8,11 +8,11 @@ const App = () => {return(
   <BrowserRouter>
   <Header />
   
-    <Routes>
+    <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/about" component={About} />
       <Route exact path="/contact" component={Contact} />
-    </Routes>
+    </Switch>
 </BrowserRouter>
   
 )}
